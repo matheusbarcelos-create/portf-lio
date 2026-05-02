@@ -74,7 +74,7 @@ O layout se adapta automaticamente para telas menores que **1224px**, com menu h
 
 ---
 
-<p align="center">Desenvolvido por <strong>Matheus Barcelos de Almeida</strong> © 2025</p>
+<p align="center">Desenvolvido por <strong>Matheus Barcelos de Almeida</strong> © 2026</p>
 
 💡 Interesse em desenvolvimento de sistemas, resolução de problemas e tecnologia<br>
 
