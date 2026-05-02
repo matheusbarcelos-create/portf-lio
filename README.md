@@ -81,4 +81,4 @@ O layout se adapta automaticamente para telas menores que **1224px**, com menu h
 ⭐ Apoie o Projeto
 --
 Se você gostou, deixe uma ⭐ no repositório!
-[README.md](https://github.com/user-attachments/files/27305160/README.md)
+(https://github.com/user-attachments/files/27305160/README.md)
