@@ -1,108 +1,136 @@
-/* estilo geral */
-
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK&display=swap');
 
-* {
+/* =============================================
+   VARIÁVEIS GLOBAIS
+   ============================================= */
+:root {
+    --cor-primaria: #ff1a1a;
+    --cor-fundo: #000000;
+    --cor-texto: #ffffff;
+    --raio-borda: 35px;
+    --transicao-padrao: 0.2s;
+    --transicao-suave: 0.3s;
+    --sombra-vermelha: 0px 0px 8px var(--cor-primaria);
+    --max-largura: 1280px;
+}
+
+/* =============================================
+   RESET E BASE
+   ============================================= */
+*,
+*::before,
+*::after {
     margin: 0;
+    padding: 0;
     border: 0;
     box-sizing: border-box;
     font-family: "Noto Sans HK", sans-serif;
 }
 
 body {
-    background-color: #000000;
-    height: 100vh;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    min-height: 100vh;
 }
 
-
-section{
+section {
     width: 100%;
-    height: 100%;
 }
 
 .interface {
-    max-width: 1280px;
+    max-width: var(--max-largura);
     margin: 0 auto;
-
 }
-
 
 .flex {
     display: flex;
 }
 
-.scroll, .scrollimg, .titulo, .especi, .especii, .especiii, .efectsobreimg, .efectsobretxt, .porti, .portii, .portiii , .btnabrir{
+.scroll,
+.scrollimg,
+.titulo,
+.especi,
+.especii,
+.especiii,
+.efectsobreimg,
+.efectsobretxt,
+.porti,
+.portii,
+.portiii,
+.btnabrir {
     visibility: hidden;
 }
 
+.btnsocial a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
 
-
-
-
-
+/* =============================================
+   BOTÃO DE CONTATO / BOTÕES GERAIS
+   ============================================= */
 .btn-contato button {
     padding: 10px 40px;
     font-size: 20px;
     font-weight: 800;
-    background-color: #ff1a1a;
-    border: 0;
-    border-radius: 35px;
+    color: var(--cor-texto);
+    background-color: var(--cor-primaria);
+    border-radius: var(--raio-borda);
     cursor: pointer;
-    transition: .2s;
+    transition: var(--transicao-padrao);
 }
 
+button:hover,
+.btn-contato button:hover,
+form .btnenv input:hover {
+    box-shadow: var(--sombra-vermelha);
+    transform: scale(1.09);
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 4px;
+}
+
+/* =============================================
+   TÍTULOS DE SEÇÃO
+   ============================================= */
 h2.titulo {
-    color: #ff1a1a;
+    color: var(--cor-primaria);
     font-size: 45px;
     text-align: center;
 }
 
 h2.titulo span {
-    text-align: center;
-    color: #ffffff;
+    color: var(--cor-texto);
     font-size: 45px;
 }
 
-button:hover,
-form .btnenv input:hover {
-    box-shadow: 0px 0px 8px #ff1a1a;
-    transform: scale(1.09);
-}
-
-/* --------------- */
-
-/* cabeçalho */
-
+/* =============================================
+   CABEÇALHO
+   ============================================= */
 header {
     padding: 35px 4%;
+    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.1);
 }
 
-header {
-
-    box-shadow: 0 0 40px 10px #ffffff1a;
-}
-
-header>.interface {
+header > .interface {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 header a {
-    color: #ffffff;
+    color: var(--cor-texto);
     text-decoration: none;
     display: inline-block;
-    transition: .2s;
-}
-
-
-header a.menu-desktop:hover {
-    color: #ff1a1a;
-    transform: scale(1.09);
+    transition: var(--transicao-padrao);
 }
 
 header nav ul {
-    list-style-type: none;
+    list-style: none;
 }
 
 header nav.menu-desktop ul li {
@@ -110,71 +138,80 @@ header nav.menu-desktop ul li {
     padding: 0 40px;
 }
 
-/* MOBILEMENU*/
-.btnabrir{
-    
+header nav.menu-desktop ul li a:hover {
+    color: var(--cor-primaria);
+    transform: scale(1.09);
 }
 
-.btnabrir i{
-    color: #ff1a1a;
+/* =============================================
+   MENU MOBILE
+   ============================================= */
+.btnabrir{
+    background-color: transparent;
+}
+
+.btnabrir i {
+    color: var(--cor-primaria);
     font-size: 50px;
     cursor: pointer;
 }
 
-.mobile{
-    background-color: #000000;
+.mobile {
+    background-color: #000000; /* ou var(--cor-fundo) */
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 99999;
-    width: 0%;
+    width: 0;
     overflow: hidden;
-    transition: .2s;
+    transition: var(--transicao-padrao);
 }
 
-.mobile.abrirmenu{
+.mobile.abrirmenu {
     width: 60%;
-    height: 100%;
+    
 }
 
-.mobile.abrirmenu ~ .mobileoverl{
+.mobile.abrirmenu ~ .mobileoverl {
     display: block;
 }
 
-.mobile nav ul{
+.mobile nav ul {
     text-align: left;
+    list-style: none;
 }
 
-.mobile nav ul li a{
-    color: white;
+.mobile nav ul li a {
+    color: var(--cor-texto);
     font-size: 20px;
     font-weight: 300;
     padding: 20px 4%;
     display: block;
+    text-decoration: none;
+    transition: background-color var(--transicao-padrao);
 }
 
-.btnfechar{
+.mobile nav ul li a:hover {
+    background-color: var(--cor-primaria);
+}
+
+.btnfechar {
     text-align: right;
-}
-
-.mobile nav ul li a:hover{
-    background-color: #ff1a1a;
-
-}
-
-.mobile .btnfechar{
     padding: 20px 10%;
+    background: transparent;
+    width: 100%;
+    display: block;
 }
 
-.mobile .btnfechar i{
-    color: #ff1a1a;
+.btnfechar i {
+    color: var(--cor-primaria);
     font-size: 50px;
     cursor: pointer;
 }
 
-.mobileoverl{
-    background-color: #000000c5;
+.mobileoverl {
+    background-color: rgba(0, 0, 0, 0.77);
     width: 100%;
     height: 100%;
     position: fixed;
@@ -182,17 +219,11 @@ header nav.menu-desktop ul li {
     left: 0;
     z-index: 88888;
     display: none;
-
 }
 
-/* ------------ */
-
-
-.btn-contato button:hover {
-    box-shadow: 0px 0px 8px #ff1a1a;
-    transform: scale(1.09);
-}
-
+/* =============================================
+   SEÇÃO TOPO
+   ============================================= */
 section.toposite {
     padding: 40px 4%;
 }
@@ -204,18 +235,18 @@ section.toposite .flex {
 }
 
 .toposite h1 {
-    color: #ff1a1a;
+    color: var(--cor-primaria);
     font-size: 50px;
     line-height: 55px;
 }
 
 .toposite .txttopo h1 span {
-    color: #ffffff;
+    color: var(--cor-texto);
 }
 
 .toposite .txttopo p {
-    color: #ffffff;
-    margin: 40px 0px;
+    color: var(--cor-texto);
+    margin: 40px 0;
 }
 
 .toposite .imgtopo img {
@@ -224,26 +255,17 @@ section.toposite .flex {
     border-radius: 50px;
 }
 
-
-/* --------------- */
-
-
-/* anima */
-
+/* =============================================
+   ANIMAÇÃO FLUTUANTE
+   ============================================= */
 @keyframes flutuar {
-    0% {
-        top: 0;
-    }
-
-    100% {
-        top: 30px;
-    }
+    from { top: 0; }
+    to   { top: 30px; }
 }
 
-/* ----------- */
-
-/* especialidades */
-
+/* =============================================
+   SEÇÃO ESPECIALIDADES
+   ============================================= */
 section.especialidades {
     padding: 40px 4%;
 }
@@ -253,22 +275,22 @@ section.especialidades .flex {
 }
 
 .especialidades .especibox {
-    color: white;
+    color: var(--cor-texto);
     padding: 40px;
-    border: 2px solid #ff1a1a;
+    border: 2px solid var(--cor-primaria);
     margin-top: 50px;
     border-radius: 30px;
-    transition: 0.3s;
+    transition: var(--transicao-suave);
 }
 
 .especialidades .especibox:hover {
     transform: scale(1.09);
-    box-shadow: 0 0 30px #ff1a1a73;
+    box-shadow: 0 0 30px rgba(255, 26, 26, 0.45);
 }
 
 .especialidades .especibox i {
     font-size: 70px;
-    color: #ff1a1a;
+    color: var(--cor-primaria);
 }
 
 .especialidades .especibox h3 {
@@ -276,10 +298,21 @@ section.especialidades .flex {
     margin: 15px 0;
 }
 
-/* --------------- */
+.especialidades .especibox a {
+    color: var(--cor-primaria);
+    font-size: 40px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: var(--transicao-padrao);
+}
 
-/* sobre */
+.especialidades .especibox a:hover {
+    transform: scale(1.1);
+}
 
+/* =============================================
+   SEÇÃO SOBRE
+   ============================================= */
 section.sobre {
     padding: 100px 4%;
 }
@@ -290,7 +323,7 @@ section.sobre .flex {
 }
 
 .sobre .txtsobre {
-    color: white;
+    color: var(--cor-texto);
 }
 
 .sobre .txtsobre h2 {
@@ -300,7 +333,7 @@ section.sobre .flex {
 }
 
 .sobre .txtsobre h2 span {
-    color: #ff1a1a;
+    color: var(--cor-primaria);
     display: block;
 }
 
@@ -309,32 +342,30 @@ section.sobre .flex {
     text-align: justify;
 }
 
-.btnsocial button {
-
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-    border: none;
-    background-color: #ff1a1a;
-    font-size: 25px;
-    cursor: pointer;
-    margin: 0 5px;
-    transition: .3s;
-}
-
-
 .sobre .imgsobre img {
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
 }
 
-/* --------------- */
+/* =============================================
+   BOTÕES SOCIAIS
+   ============================================= */
+.btnsocial button {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: var(--cor-primaria);
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: var(--transicao-suave);
+}
 
-/* PROTFÓLIO */
-
+/* =============================================
+   SEÇÃO PORTFÓLIO
+   ============================================= */
 section.portif {
-    padding: 60px 4%;
-    padding-bottom: 200px;
+    padding: 60px 4% 200px;
 }
 
 section.portif .flex {
@@ -343,12 +374,11 @@ section.portif .flex {
 }
 
 .imgport {
-
     width: 400px;
     height: 480px;
     background-size: cover;
     background-position: 100% 0%;
-    transition: 10s;
+    transition: background-position 10s;
     cursor: pointer;
     border-radius: 50px;
     position: relative;
@@ -356,67 +386,58 @@ section.portif .flex {
 
 .imgport:hover {
     background-position: 100% 100%;
-
 }
 
 .overl {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     font-weight: 600;
-    color: #ffffff;
-    background-color: #000000cc;
+    color: var(--cor-texto);
+    background-color: rgba(0, 0, 0, 0.8);
     opacity: 0;
-    transition: .5s;
+    transition: opacity 0.5s;
     text-align: center;
+    padding: 20px;
+    text-decoration: none;
 }
 
 .overl:hover {
     opacity: 1;
 }
 
-/* --------------- */
-
-/* FORMULARIO */
-
+/* =============================================
+   SEÇÃO FORMULÁRIO (reservado para uso futuro)
+   ============================================= */
 section.formu {
     padding: 80px 4%;
 }
 
 form {
-    max width: 500px;
-    margin: 0 auto;
+    max-width: 500px; /* BUG CORRIGIDO: era "max width" sem hífen */
+    margin: 40px auto 0;
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-    margin-top: 40px;
-
 }
 
 form input,
 form textarea {
     width: 100%;
-    background-color: #ffffff1a;
-    border: 0;
-    outline: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    outline: none;
     padding: 20px 15px;
     border-radius: 50px;
-    color: #ffffff;
+    color: var(--cor-texto);
     font-size: 20px;
 }
 
-form input::placeholder {
-    color: gray;
-}
-
+form input::placeholder,
 form textarea::placeholder {
     color: gray;
 }
@@ -424,28 +445,28 @@ form textarea::placeholder {
 form textarea {
     resize: none;
     max-height: 300px;
+    border-radius: 20px;
 }
 
 form .btnenv {
     margin-top: 20px;
     text-align: center;
-
 }
 
 form .btnenv input {
     width: 120px;
-    background-color: #ff1a1a;
-    color: #000000;
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
     font-weight: 700;
     cursor: pointer;
-    transition: .2s;
+    transition: var(--transicao-padrao);
 }
 
-/* --------------- */
-
-/* footer */
+/* =============================================
+   RODAPÉ
+   ============================================= */
 footer {
-    box-shadow: 0 0 40px 10px #ffffff1a;
+    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.1);
 }
 
 footer .flex {
@@ -454,33 +475,36 @@ footer .flex {
 
 footer .linefot {
     padding: 30px 0;
-
 }
 
-.borda {
-    border-top: 5px solid #ff1a1a;
+footer .linefot p {
+    color: var(--cor-texto);
 }
 
 footer .linefot p i {
-    color: #ff1a1a;
+    color: var(--cor-primaria);
     font-size: 25px;
 }
 
 footer .linefot p a {
-    color: #ffffff;
-
+    color: var(--cor-texto);
+    text-decoration: none;
 }
 
-/* --------------- */
+footer .linefot p a:hover {
+    color: var(--cor-primaria);
+}
 
-/* mediaque*/
+.borda {
+    border-top: 5px solid var(--cor-primaria);
+}
 
+/* =============================================
+   RESPONSIVIDADE — telas até 1224px
+   ============================================= */
 @media screen and (max-width: 1224px) {
 
-    /* classes gerais*/
-
-
-    .btnabrir{
+    .btnabrir {
         visibility: visible;
     }
 
@@ -488,34 +512,27 @@ footer .linefot p a {
         flex-direction: column-reverse;
     }
 
-    h2.titulo{
+    h2.titulo,
+    h2.titulo span {
         font-size: 30px;
         line-height: 30px;
     }
 
-    h2.titulo span{
-        font-size: 30px;
-        line-height: 30px;
 
-    }
-
-    /* cabeçalho*/
     .menu-desktop,
-    .btn-contato {
+    header .btn-contato {
         display: none;
     }
 
-
-    /* topo site*/
+    /* Topo */
+    section.toposite {
+        padding: 20px 10%;
+    }
 
     section.toposite .flex {
         align-items: center;
         justify-content: center;
         gap: 40px;
-    }
-
-    section.toposite {
-        padding: 20px 10%;
     }
 
     .toposite h1 {
@@ -525,69 +542,58 @@ footer .linefot p a {
 
     .toposite .imgtopo img {
         width: 50%;
-        height: 50%;
+        height: auto;
     }
 
-    /* especi*/
+    /* Especialidades */
     section.especialidades {
         padding: 40px 10%;
     }
 
-/* sobre */
+    /* Sobre */
+    section.sobre {
+        padding: 50px;
+    }
 
-section.sobre{
-    padding: 50px;
+    .sobre .txtsobre h2 {
+        font-size: 37px;
+        line-height: 40px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
 
+    .btnsocial {
+        text-align: center;
+    }
+
+    .imgsobre img {
+        padding: 10px 8%;
+        width: 100%;
+        height: auto;
+    }
+
+    /* Portfólio */
+    section.portif {
+        padding: 80px 10%;
+    }
+
+    section.portif .flex {
+        gap: 60px;
+    }
+
+    .imgport {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    /* Rodapé */
+    footer .flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer .linefot {
+        text-align: center;
+    }
 }
-
-.sobre .txtsobre h2 {
-    font-size: 37px;
-    line-height: 40px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.btnsocial{
-    text-align: center;
-}
-
-.imgsobre img {
-    
-    padding: 10px 8%;
-    width: 100%;
-    height: 100%;
-}
-
-
-/* portif*/
-
-section.portif{
-    padding: 80px 10%;
-}
-
-.imgport {
-
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-
-}
-
-section.portif .flex{
-    gap: 60px;
-}
-
-/* rodape */
-
-footer .flex{
-    flex-direction: column;
-    gap: 10px;
-}
-
-footer .linefot{
-    text-align: center;
-}
-
-}
-
-/* --------------- */

@@ -1,90 +1,22 @@
-window.revel = ScrollReveal({reset:true})
+const reveal = ScrollReveal({ reset: true });
 
-// topo //
+// Seção topo
+reveal.reveal('.scroll',    { duration: 2500, distance: '90px', origin: 'left' });
+reveal.reveal('.scrollimg', { duration: 2500, distance: '90px', origin: 'right' });
 
-revel.reveal('.scroll' , 
-{
-    duration: 2500,
-    distance: '90px',
-    origin: 'left'
+// Títulos de seção
+reveal.reveal('.titulo', { duration: 2500, distance: '90px', origin: 'top' });
 
-})
+// Especialidades
+reveal.reveal('.especi',   { duration: 2500, distance: '90px' });
+reveal.reveal('.especii',  { duration: 2500, distance: '90px' });
+reveal.reveal('.especiii', { duration: 2500, distance: '90px' });
 
-revel.reveal('.scrollimg' , 
-{
-    duration: 2500,
-    distance: '90px',
-    origin: 'right'
-    
-})
+// Seção sobre
+reveal.reveal('.efectsobreimg', { duration: 2500, distance: '90px', origin: 'left' });
+reveal.reveal('.efectsobretxt', { duration: 2500, distance: '90px', origin: 'right' });
 
-// titulos //
-
-revel.reveal('.titulo' , 
-{
-    duration: 2500,
-    distance: '90px',
-    origin: 'top'
-})
-
-// especi //
-
-revel.reveal('.especi' , 
-{
-    duration: 2500,
-    distance: '90px'
-
-})
-
-revel.reveal('.especii' , 
-{
-    duration: 2500,
-    distance: '90px'
-})
-
-revel.reveal('.especiii' , 
-{
-    duration: 2500,
-    distance: '90px'
-    
-})
-
-//sobre//
-
-revel.reveal('.efectsobreimg' , 
-{
-    duration: 2500,
-    distance: '90px',
-    origin: 'left'
-})
-
-revel.reveal('.efectsobretxt' , 
-{
-    duration: 2500,
-    distance: '90px',
-    origin: 'right'
-})
-
-//portf//
-
-revel.reveal('.porti' , 
-{
-    duration: 2500,
-    distance: '90px'
-})
-
-revel.reveal('.portii' , 
-{
-    duration: 2500,
-    distance: '90px'
-  
-})
-
-revel.reveal('.portiii' , 
-{
-    duration: 2500,
-    distance: '90px'
-    
-})
-
-
+// Portfólio
+reveal.reveal('.porti',   { duration: 2500, distance: '90px' });
+reveal.reveal('.portii',  { duration: 2500, distance: '90px' });
+reveal.reveal('.portiii', { duration: 2500, distance: '90px' });

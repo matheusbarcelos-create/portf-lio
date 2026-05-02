@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MBA Matheus Barcelos de Almeida</title>
+    <meta name="description" content="Portfólio de Matheus Barcelos de Almeida, estudante de Engenharia da Computação focado em desenvolvimento de sistemas.">
+    <title>MBA | Matheus Barcelos de Almeida</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -20,8 +21,7 @@
 
     <header>
         <div class="interface">
-
-            <nav class="menu-desktop">
+            <nav class="menu-desktop" aria-label="Menu principal">
                 <ul>
                     <li><a href="#toposite">INICIO</a></li>
                     <li><a href="#especialidades">ESPECIALIDADES</a></li>
@@ -29,34 +29,33 @@
                     <li><a href="#portif">PROJETOS</a></li>
                 </ul>
             </nav>
+
             <div class="btn-contato">
-                <a href="https://wa.me/5534988375360" target="_blank">
-                    <button>CONTATO</button>
+                <a href="https://wa.me/5534988375360" target="_blank" rel="noopener noreferrer">
+                    <button type="button">CONTATO</button>
                 </a>
-
             </div>
-            <div class="btnabrir" id="abrirmobile">
+
+            <button class="btnabrir" id="abrirmobile" type="button" aria-label="Abrir menu" aria-expanded="false">
                 <i class="bi bi-list"></i>
-            </div>
-            <div class="mobile" id="mobile">
-                <div class="btnfechar">
-                    <i class="bi bi-x-circle"></i>
-                </div>
+            </button>
 
-                <nav>
+            <div class="mobile" id="mobile" aria-hidden="true">
+                <button class="btnfechar" id="fecharmobile" type="button" aria-label="Fechar menu">
+                    <i class="bi bi-x-circle"></i>
+                </button>
+                <nav aria-label="Menu mobile">
                     <ul>
                         <li><a href="#toposite">INICIO</a></li>
                         <li><a href="#especialidades">ESPECIALIDADES</a></li>
                         <li><a href="#sobre">SOBRE</a></li>
                         <li><a href="#portif">PROJETOS</a></li>
-                        <li><a href="https://wa.me/5534988375360">CONTATO</a></li>
+                        <li><a href="https://wa.me/5534988375360" rel="noopener noreferrer">CONTATO</a></li>
                     </ul>
                 </nav>
-
             </div>
-            <div class="mobileoverl" id="mobileoverl">
 
-            </div>
+            <div class="mobileoverl" id="mobileoverl" aria-hidden="true"></div>
         </div>
     </header>
 
@@ -65,46 +64,46 @@
             <div class="interface">
                 <div class="flex">
                     <div class="txttopo scroll">
-                        <h1>DESENVOLVEDOR EM FORMAÇÃO FOCADO NA CONSTRUÇÃO DE SISTEMAS FUNCIONAIS E BEM
-                            ESTRUTURADOS<span>.</span></h1>
+                        <h1>DESENVOLVEDOR EM FORMAÇÃO FOCADO NA CONSTRUÇÃO DE SISTEMAS FUNCIONAIS E BEM ESTRUTURADOS<span>.</span></h1>
                         <p>Sou estudante de Engenharia da Computação com foco no desenvolvimento de sistemas e soluções
                             tecnológicas. Possuo experiência na criação de aplicações web, priorizando usabilidade,
                             organização de código e resolução de problemas reais. Estou em constante evolução, buscando
                             aplicar e aprimorar minhas habilidades por meio de projetos práticos.</p>
                         <div class="btn-contato">
-                            <a href="https://wa.me/5534988375360" target="_blank">
-                                <button>CONTATO</button>
+                            <a href="https://wa.me/5534988375360" target="_blank" rel="noopener noreferrer">
+                                <button type="button">CONTATO</button>
                             </a>
-
                         </div>
                     </div>
 
                     <div class="imgtopo scrollimg">
-                        <img src="img/modelo.png" width="370px" height="500px" alt="Matheus Barcelos de Almeida">
+                        <img src="img/modelo.png" width="370" height="500" alt="Matheus Barcelos de Almeida" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="especialidades" id="especialidades">
-            <div class="intarface">
+            <div class="interface"> 
                 <h2 class="titulo">ESPECIA<span>LIDADES.</span></h2><br>
                 <div class="flex">
                     <div class="especibox especi">
-                        <i class="bi bi-braces"></i>
+                        <i class="bi bi-braces" aria-hidden="true"></i>
                         <h3>EXPERIÊNCIA EM LINGUAGENS</h3>
                         <p>Java, Python, JavaScript, C</p>
-                        <p>SQL, PLSQL</p>
-                        <p>Web (HTML & CSS)</p>
+                        <p>SQL, PL/SQL</p>
+                        <p>Web (HTML &amp; CSS)</p>
                     </div>
                     <div class="especibox especii">
-                        <i class="bi bi-check-lg"></i>
+                        <i class="bi bi-check-lg" aria-hidden="true"></i>
                         <h3>CERTIFICADOS</h3>
                         <p>Todos certificados adquiridos ao longo do caminho acadêmico estão anexados para download</p>
-                        <a href="certificados/certificados.zip"><i class="bi bi-arrow-down-circle"></i></a>
+                        <a href="certificados/certificados.zip" aria-label="Baixar certificados">
+                            <i class="bi bi-arrow-down-circle" aria-hidden="true"></i>
+                        </a>
                     </div>
                     <div class="especibox especiii">
-                        <i class="bi bi-cone-striped"></i>
+                        <i class="bi bi-cone-striped" aria-hidden="true"></i>
                         <h3>EM ANDAMENTO...</h3>
                         <p>Busco me desenvolver nos diversos papéis que um engenheiro de computação pode exercer, como o
                             desenvolvimento de software e sistemas, programação, análise e modelagem de soluções
@@ -122,8 +121,7 @@
             <div class="interface">
                 <div class="flex">
                     <div class="imgsobre efectsobreimg">
-                        <img src="img/matheus.jpeg" width="350px" height="620px" alt="Matheus Barcelos de Almeida">
-
+                        <img src="img/matheus.jpeg" width="350" height="620" alt="Matheus Barcelos de Almeida" loading="lazy">
                     </div>
                     <div class="txtsobre efectsobretxt">
                         <h2>Olá, sou o<span>Matheus Barcelos de Almeida.</span></h2>
@@ -138,14 +136,18 @@
                             Ao longo da minha trajetória acadêmica, venho me identificando significativamente com a
                             área, reforçando minha decisão profissional.</p>
                         <div class="btnsocial">
-                            <a href="https://www.instagram.com/matheusbarcelos034/" target="_blank"><button><i
-                                        class="bi bi-instagram"></i></button></a>
-                            <a href="https://github.com/matheusbarcelos-create" target="_blank"><button><i
-                                        class="bi bi-github"></i></button></a>
-                            <a href="https://www.linkedin.com/in/matheus-barcelos-de-almeida034/"
-                                target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
-                            <a href="https://www.reddit.com/user/omautheus/" target="_blank"><button><i
-                                        class="bi bi-reddit"></i></i></button></a>
+                            <a href="https://www.instagram.com/matheusbarcelos034/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <button type="button"><i class="bi bi-instagram" aria-hidden="true"></i></button>
+                            </a>
+                            <a href="https://github.com/matheusbarcelos-create" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <button type="button"><i class="bi bi-github" aria-hidden="true"></i></button>
+                            </a>
+                            <a href="https://www.linkedin.com/in/matheus-barcelos-de-almeida034/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <button type="button"><i class="bi bi-linkedin" aria-hidden="true"></i></button>
+                            </a>
+                            <a href="https://www.reddit.com/user/omautheus/" target="_blank" rel="noopener noreferrer" aria-label="Reddit">
+                                <button type="button"><i class="bi bi-reddit" aria-hidden="true"></i></button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -156,38 +158,17 @@
             <div class="interface">
                 <h2 class="titulo">PROJETOS<span>/PORTFÓLIO</span></h2>
                 <div class="flex">
-                    <div class="imgport porti" style="background-image: url(img/port1.png);"><a href="https://www.linkedin.com/in/matheus-barcelos-de-almeida034/recent-activity/all/"
-                            target="_blank">
-                            <div class="overl">Projeto: H²O no XVIII ENTEC!</div>
+                    <div class="imgport porti" style="background-image: url(img/port1.png);">
+                        <a href="h2o.html" class="overl">Projeto: H²O no XVIII ENTEC!</a>
+                    </div>
+                    <div class="imgport portii" style="background-image: url(img/port2.png);">
+                        <a href="https://www.instagram.com/eng.uniube/" target="_blank" rel="noopener noreferrer" class="overl">
+                            Diretor de Integração:<br>Associação Atlética Acadêmica de Engenharias Uniube
                         </a>
                     </div>
-                    <div class="imgport portii" style="background-image: url(img/port2.png);"><a href="https://www.instagram.com/eng.uniube/"
-                            target="_blank">
-                            <div class="overl">Diretor de Integração:<br>Associação Atlética Acadêmica de Engenharias
-                                Uniube</div>
-                        </a>
-                    </div>
-                    <!--<div class="imgport portiii" style="background-image: url(img/port1.png);"><a href="#"></a>
-                        <div class="overl">Trabalho Acadêmico: TECNOLOGIAS PARA INTERNET I</div></a>
-                    </div>-->
                 </div>
             </div>
         </section>
-
-        <!--<section class="formu">
-            <div class="interface">
-                <h2 class="titulo">FALE <span> COMIGO.</span></h2>
-                <form action="">
-                    <input type="text" name="" id="" placeholder="Seu nome:" required>
-                    <input type="text" name="" id="" placeholder="Seu e-mail:" required>
-                    <input type="text" name="" id="" placeholder="Seu número de celular:">
-                    <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
-                    <div class="btnenv">
-                        <input type="submit" value="ENVIAR">
-                    </div>
-                </form>
-            </div>
-        </section>-->
     </main>
 
     <footer>
@@ -195,23 +176,29 @@
             <div class="linefot">
                 <div class="flex">
                     <div class="btnsocial">
-                        <a href="https://www.instagram.com/matheusbarcelos034/" target="_blank"><button><i
-                                    class="bi bi-instagram"></i></button></a>
-                        <a href="https://github.com/matheusbarcelos-create" target="_blank"><button><i
-                                    class="bi bi-github"></i></button></a>
-                        <a href="https://www.linkedin.com/in/matheus-barcelos-de-almeida034/" target="_blank"><button><i
-                                    class="bi bi-linkedin"></i></button></a>
-                        <a href="https://www.reddit.com/user/omautheus/" target="_blank"><button><i
-                                    class="bi bi-reddit"></i></i></button></a>
-
+                        <a href="https://www.instagram.com/matheusbarcelos034/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <button type="button"><i class="bi bi-instagram" aria-hidden="true"></i></button>
+                        </a>
+                        <a href="https://github.com/matheusbarcelos-create" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <button type="button"><i class="bi bi-github" aria-hidden="true"></i></button>
+                        </a>
+                        <a href="https://www.linkedin.com/in/matheus-barcelos-de-almeida034/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <button type="button"><i class="bi bi-linkedin" aria-hidden="true"></i></button>
+                        </a>
+                        <a href="https://www.reddit.com/user/omautheus/" target="_blank" rel="noopener noreferrer" aria-label="Reddit">
+                            <button type="button"><i class="bi bi-reddit" aria-hidden="true"></i></button>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="linefot borda">
-                <p><i class="bi bi-envelope-at"></i> <a
-                        href="mailto:matheusbarcelos@edu.uniube.br">matheusbarcelos@edu.uniube.br</a></p>
+                <address>
+                    <p>
+                        <i class="bi bi-envelope-at" aria-hidden="true"></i>
+                        <a href="mailto:matheusbarcelos@edu.uniube.br">matheusbarcelos@edu.uniube.br</a>
+                    </p>
+                </address>
             </div>
-
         </div>
     </footer>
 
