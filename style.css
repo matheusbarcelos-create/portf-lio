@@ -301,8 +301,9 @@ section.especialidades .flex {
 .especialidades .especibox a {
     color: var(--cor-primaria);
     font-size: 40px;
-    display: inline-block;
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
     transition: var(--transicao-padrao);
 }
 
