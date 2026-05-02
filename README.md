@@ -8,7 +8,7 @@ Portfólio pessoal desenvolvido com HTML, CSS e JavaScript puro, apresentando mi
 
 ## 🔗 Acesse o Projeto
 
-> [matheusbarcelos.dev](https://matheusbarcelos-create.github.io/portf-lio/) ← substitua pelo link do seu deploy
+> [matheusbarcelos.dev](https://matheusbarcelos-create.github.io/portf-lio/)
 
 ---
 
