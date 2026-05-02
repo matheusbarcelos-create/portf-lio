@@ -17,5 +17,3 @@
 ⭐ Apoie o Projeto
 --
 Se você gostou, deixe uma ⭐ no repositório!
-
-<p align="center"> <img src="https://streak-stats.demolab.com?user=matheusbarcelos-create&theme=radical&hide_border=false"/> </p>
