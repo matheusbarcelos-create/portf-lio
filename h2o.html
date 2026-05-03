@@ -23,10 +23,10 @@
         <div class="interface">
             <nav class="menu-desktop" aria-label="Menu principal">
                 <ul>
-                    <li><a href="h2o.html#toposite">INICIO</a></li>
-                    <li><a href="h2o.html#tecnologias">TECNOLOGIAS USADAS</a></li>
-                    <li><a href="h2o.html#intro">INTRODUÇÃO PROJETO</a></li>
-                    <li><a href="h2o.html#imagens">IMAGENS</a></li>
+                    <li><a href="#toposite">INÍCIO</a></li>
+                    <li><a href="#tecnologias">TECNOLOGIAS</a></li>
+                    <li><a href="#intro">INTRODUÇÃO</a></li>
+                    <li><a href="#imagens">IMAGENS</a></li>
                 </ul>
             </nav>
 
@@ -44,12 +44,13 @@
                 <button class="btnfechar" id="fecharmobile" type="button" aria-label="Fechar menu">
                     <i class="bi bi-x-circle"></i>
                 </button>
+                <!-- BUG CORRIGIDO: mobile agora aponta para as mesmas seções do menu desktop -->
                 <nav aria-label="Menu mobile">
                     <ul>
-                        <li><a href="index.html#toposite">INICIO</a></li>
-                        <li><a href="index.html#especialidades">ESPECIALIDADES</a></li>
-                        <li><a href="index.html#sobre">SOBRE</a></li>
-                        <li><a href="index.html#portif">PROJETOS</a></li>
+                        <li><a href="#toposite">INÍCIO</a></li>
+                        <li><a href="#tecnologias">TECNOLOGIAS</a></li>
+                        <li><a href="#intro">INTRODUÇÃO</a></li>
+                        <li><a href="#imagens">IMAGENS</a></li>
                         <li><a href="https://wa.me/5534988375360" rel="noopener noreferrer">CONTATO</a></li>
                     </ul>
                 </nav>
@@ -66,17 +67,16 @@
                     <div class="txttopo scroll">
                         <h1>PROJETO H²O<span> NO XVIII ENTEC!</span></h1>
                         <p>Projeto desenvolvido e apresentado no XVIII ENTEC (Encontro de Tecnologia e Ciências),
-                            explorando soluções inovadoras relacionadas à temática da água e sustentabilidade.</p>
+                            explorando soluções inovadoras relacionadas à temática da água e sustentabilidade com uso de
+                            IoT, sensores e inteligência artificial.</p>
                         <div class="btn-contato">
                             <a href="index.html#portif">
                                 <button type="button">VER PROJETOS</button>
                             </a>
                         </div>
                     </div>
-
                     <div class="imgtopo scrollimg">
-                        <img src="img/entec1.jpg" width="370" height="500" alt="Projeto H²O no XVIII ENTEC"
-                            loading="lazy">
+                        <img src="img/entec1.jpg" width="370" height="500" alt="Projeto H²O no XVIII ENTEC" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -84,18 +84,18 @@
 
         <section class="especialidades" id="tecnologias">
             <div class="interface">
-                <h2 class="titulo">A Tecnologia<span> por Trás do Projeto.</span></h2><br>
+                <h2 class="titulo">A TECNOLOGIA<span> POR TRÁS DO PROJETO.</span></h2><br>
                 <div class="flex">
                     <div class="especibox especi">
                         <i class="bi bi-braces" aria-hidden="true"></i>
-                        <h3>BACKEND/FRONTEND</h3>
-                        <p>Os dados são enviados para a plataforma ThingSpeak, que nos serviu como base para a coleta e
+                        <h3>BACKEND / FRONTEND</h3>
+                        <p>Os dados são enviados para a plataforma ThingSpeak, que serviu como base para coleta e
                             armazenamento. A partir dela, desenvolvemos um dashboard customizado em HTML para visualizar
                             tudo em tempo real.</p>
                     </div>
                     <div class="especibox especii">
                         <i class="bi bi-cpu-fill" aria-hidden="true"></i>
-                        <h3>FIRWARE</h3>
+                        <h3>FIRMWARE</h3>
                         <p>Programamos o ESP32 utilizando C++ (com o framework do Arduino). Ele é responsável por
                             calcular a vazão, o volume e enviar esses dados via Wi-Fi.</p>
                     </div>
@@ -103,12 +103,12 @@
                         <i class="bi bi-laptop" aria-hidden="true"></i>
                         <h3>HARDWARE</h3>
                         <p>No coração do sistema, temos um ESP32 atuando como o cérebro, lendo os dados do
-                            sensor de vazão YF-S201 (o componente preto em linha com a mangueira).</p>      
+                            sensor de vazão YF-S201 instalado em linha com a mangueira.</p>
                     </div>
                     <div class="especibox especi">
                         <i class="bi bi-download" aria-hidden="true"></i>
-                        <h3>DOWNLOAD DO BANNER ENTEC XVIII</h3>
-                        <a href="certificados/Banner-ENTEC2025-Ioth20-1.zip" aria-label="Baixar certificados">
+                        <h3>BANNER DO ENTEC XVIII</h3>
+                        <a href="certificados/Banner-ENTEC2025-Ioth20-1.zip" aria-label="Baixar banner do ENTEC">
                             <i class="bi bi-arrow-down-circle" aria-hidden="true"></i>
                         </a>
                     </div>
@@ -120,92 +120,22 @@
             <div class="interface">
                 <div class="flex">
                     <div class="txtsobre efectsobretxt">
-                        <h2>INTRODUÇÃO<span>E OBJETIVOS</span></h2>
+                        <h2>INTRODUÇÃO<span> E OBJETIVOS</span></h2>
                         <p>Atualmente, as pautas sobre consumo consciente e preservação dos recursos naturais são de
-                            grande
-                            relevância em todo o mundo. Diante da crescente demanda por sustentabilidade nas áreas
-                            residencial e comercial, o uso eficiente da água tem se mostrado um desafio constante,
-                            principalmente pela falta de ferramentas eficientes para o monitoramento detalhado e em
-                            tempo
-                            real.
-
-                            Diante desse cenário, propõe-se, neste trabalho, o desenvolvimento de um sistema inteligente
-                            baseado em Internet das coisas(loT) para o monitoramento e a otimização do consumo de água
-                            em
-                            edificações. A ideia base é utilizar sensores de fluxo de baixo custo, instalados em pontos
-                            estratégicos, para coletar dados e permitir a análise em tempo real do uso da água, com o
-                            auxílio da inteligência artificial, visando à identificação de anomalias, detecção de
-                            vazamentos
-                            e fornecimento de sugestões para redução do desperdício.
-
-                            O foco do projeto está na integração de loT, análise de dados e machine Learning para a
-                            criação
-                            de um sistema capaz de promover a conservação da água e a conscientização dos usuários
-                            quanto ao
-                            seu consumo. Inicialmente, o estudo será delimitado à aplicação prática do sistema em
-                            edificações específicas, podendo ser ampliado futuramente para diferentes tipos de
-                            construções,
-                            com adaptações nos sensores e algoritmos.
-
-                            No contexto das engenharias e dos cursos tecnológicos, o tema se situa na junção de
-                            automação
-                            residencial, análise de dados e inteligência artificial aplicada a problemas ambientais.
-                            Dessa
-                            forma, esses desafios ambientais foram a motivação dessa pesquisa, diante da necessidade
-                            urgente
-                            de preservar os recursos hídricos, reduzir custos operacionais e promover práticas mais
-                            sustentáveis. O desperdício de água, uma preocupação de escala mundial, é enfrentado por
-                            meio de
-                            um sistema de monitoramento inteligente, proposto neste trabalho, capaz de acompanhar em
-                            tempo
-                            real e detectar falhas, representando, assim, uma contribuição relevante para a mitigação
-                            desse
-                            problema.
-
-                            O objeto de análise deste estudo é o consumo de água em edificações, analisado por meio dos
-                            dados obtidos via sensores loT e interpretados com algoritmos de inteligência artificial,
-                            com
-                            ênfase na detecção de anomalias como vazamentos e padrões de uso ineficientes.
-                        </p>
-                        O objetivo do projeto é desenvolver com o auxílio da tecnologia um sistema que permita monitorar
-                        precisamente e em tempo real o consumo de água em edifícios, por meio de sensores integrados a
-                        uma
-                        plataforma de IoT (Internet das Coisas).
-
-                        A proposta do projeto é identificar padrões de uso, identificar vazamentos e consumos anormais
-                        de
-                        água com o auxílio de algoritmos de inteligência artificial.
-                        Dessa forma, conseguimos alcançar de forma satisfatória uma forma de otimizar o consumo desse
-                        recurso, reduzir desperdícios e encontrar a melhor forma de conscientizar os usuários sobre como
-                        evitar o mau gerenciamento da água.
-
-                        O nosso projeto tem como objetivo principal sugerir uma das possíveis soluções para otimizar a
-                        utilização da água, um dos elementos fundamentais que possuímos em nosso planeta, indispensável
-                        para
-                        a vida humana e de todos os seres que residem na Terra. Necessitamos zelar por ela e mantê-la
-                        estável para que a mesma não falte à nós em um tempo futuro.
-
-                        O uso da Internet das Coisas (IoT) no monitoramento e na otimização do consumo de água em
-                        edificações propõe uma transformação inteligente na gestão hídrica, baseada na antecipação e no
-                        controle automatizado. Em vez de agir apenas após o desperdício acontecer, os dispositivos IoT
-                        permitem prever picos de consumo, ajustar automaticamente o fornecimento conforme a demanda e
-                        até
-                        desligar sistemas em caso de anomalias. Além disso, a integração desses sensores com plataformas
-                        de
-                        gerenciamento centralizado possibilita a visualização do consumo por setor ou horário,
-                        incentivando
-                        medidas específicas de economia. Essa nova abordagem torna as edificações mais autônomas,
-                        eficientes
-                        e ambientalmente responsáveis.
-
-                        <p>
-
-                        </p>
+                            grande relevância em todo o mundo. Diante da crescente demanda por sustentabilidade nas
+                            áreas residencial e comercial, o uso eficiente da água tem se mostrado um desafio constante,
+                            principalmente pela falta de ferramentas eficientes para monitoramento em tempo real.</p>
+                        <p>Propõe-se o desenvolvimento de um sistema inteligente baseado em IoT para o monitoramento e
+                            otimização do consumo de água em edificações, utilizando sensores de fluxo de baixo custo
+                            instalados em pontos estratégicos, com análise em tempo real via inteligência artificial —
+                            visando à identificação de anomalias, detecção de vazamentos e sugestões de redução de
+                            desperdício.</p>
+                        <p>O objetivo principal é sugerir uma solução prática para otimizar a utilização da água,
+                            recurso fundamental e indispensável à vida. O sistema monitora padrões de uso, detecta
+                            consumos anormais e conscientiza os usuários sobre o mau gerenciamento hídrico.</p>
                         <div class="btnsocial">
-
-
-                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7388904739788402688/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEySuzEB1XB3ch2TAmjOHOy2XcV4prdOBio"
-                                target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7388904739788402688/"
+                                target="_blank" rel="noopener noreferrer" aria-label="Ver no LinkedIn">
                                 <button type="button"><i class="bi bi-linkedin" aria-hidden="true"></i></button>
                             </a>
                         </div>
@@ -218,12 +148,9 @@
             <div class="interface">
                 <h2 class="titulo">IMAGENS/<span>DESENVOLVIMENTO</span></h2>
                 <div class="flex">
-                    <div class="imgport porti" style="background-image: url(img/ENTEC.jpg);">
-                    </div>
-                    <div class="imgport portii" style="background-image: url(img/ENTECC.jpg);">
-                    </div>
-                    <div class="imgport portiii" style="background-image: url(img/ENTECCC.jpg);">
-                    </div>
+                    <div class="imgport porti"  style="background-image: url(img/ENTEC.jpg);"></div>
+                    <div class="imgport portii" style="background-image: url(img/ENTECC.jpg);"></div>
+                    <div class="imgport portiii" style="background-image: url(img/ENTECCC.jpg);"></div>
                 </div>
             </div>
         </section>
@@ -233,47 +160,34 @@
                 <div class="flex">
                     <div class="txtsobre efectsobretxt">
                         <h2>RESULTADOS<span> OBTIDOS</span></h2>
-                        <p>
-                            O Resultado (Visível nas Fotos):
-                            Nosso dashboard exibe as métricas mais importantes de forma clara:
-                            Vazão Instantânea: O consumo em L/min no exato momento.
-                            Volume Total: O acumulado de água que passou pelo sistema.
-                            Status do Sistema: A funcionalidade-chave!
-
-                            O sistema é capaz de identificar padrões anômalos de consumo. Como podem ver em uma das
-                            imagens, o status muda de "Sistema Normal" (verde) para "Vazamento Detectado" (vermelho)
-                            alertando sobre desperdício de forma imediata.
-
-                            Apresentar no ENTEC foi uma experiência fantástica para validar a ideia e mostrar como
-                            podemos usar ferramentas acessíveis para criar soluções práticas para a sustentabilidade.
-                        </p>
+                        <p>Nosso dashboard exibe as métricas mais importantes de forma clara: Vazão Instantânea em
+                            L/min, Volume Total acumulado e Status do Sistema — a funcionalidade-chave do projeto.</p>
+                        <p>O sistema identifica padrões anômalos de consumo. Como é possível ver nas imagens, o status
+                            muda de "Sistema Normal" (verde) para "Vazamento Detectado" (vermelho), alertando sobre
+                            desperdício de forma imediata.</p>
+                        <p>Apresentar no ENTEC foi uma experiência fantástica para validar a ideia e mostrar como
+                            ferramentas acessíveis podem criar soluções práticas para a sustentabilidade.</p>
+                    </div>
                 </div>
             </div>
         </section>
-
     </main>
-
-
 
     <footer>
         <div class="interface">
             <div class="linefot">
                 <div class="flex">
                     <div class="btnsocial">
-                        <a href="https://www.instagram.com/matheusbarcelos034/" target="_blank"
-                            rel="noopener noreferrer" aria-label="Instagram">
+                        <a href="https://www.instagram.com/matheusbarcelos034/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <button type="button"><i class="bi bi-instagram" aria-hidden="true"></i></button>
                         </a>
-                        <a href="https://github.com/matheusbarcelos-create" target="_blank" rel="noopener noreferrer"
-                            aria-label="GitHub">
+                        <a href="https://github.com/matheusbarcelos-create" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                             <button type="button"><i class="bi bi-github" aria-hidden="true"></i></button>
                         </a>
-                        <a href="https://www.linkedin.com/in/matheus-barcelos-de-almeida034/" target="_blank"
-                            rel="noopener noreferrer" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/matheus-barcelos-de-almeida034/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                             <button type="button"><i class="bi bi-linkedin" aria-hidden="true"></i></button>
                         </a>
-                        <a href="https://www.reddit.com/user/omautheus/" target="_blank" rel="noopener noreferrer"
-                            aria-label="Reddit">
+                        <a href="https://www.reddit.com/user/omautheus/" target="_blank" rel="noopener noreferrer" aria-label="Reddit">
                             <button type="button"><i class="bi bi-reddit" aria-hidden="true"></i></button>
                         </a>
                     </div>
@@ -291,5 +205,4 @@
     </footer>
 
 </body>
-
 </html>
