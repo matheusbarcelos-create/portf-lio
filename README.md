@@ -36,14 +36,18 @@ Portfólio pessoal desenvolvido com HTML, CSS e JavaScript puro, apresentando mi
 ## 📁 Estrutura de Arquivos
 
 ```
-📦 portfolio
- ┣ 📄 index.html       # Página principal
- ┣ 📄 style.css        # Estilos globais e responsividade
- ┣ 📄 mobilemenu.js    # Lógica do menu mobile
- ┣ 📄 rev.js           # Configuração das animações ScrollReveal
- ┣ 📁 img/             # Imagens do projeto
- ┣ 📁 certificados/    # Arquivo .zip com certificados
- └ 📁 favicon_io/      # Ícones da aba do navegador
+📦 portfolio/
+ ├── 📄 index.html              # Página principal
+ ├── 📄 h2o.html                # Projeto H²O — XVIII ENTEC
+ ├── 📄 atletica.html           # Atlética de Engenharias Uniube
+ ├── 📄 primeirosite.html       # Trabalho acadêmico — ALC Materiais
+ ├── 📄 style.css               # Estilos globais e responsividade
+ ├── 📄 rev.js                  # Animações ScrollReveal
+ ├── 📄 mobilemenu.js           # Lógica do menu mobile
+ ├── 📁 img/                    # Imagens do portfólio
+ ├── 📁 certificados/           # Arquivos para download
+ └── 📁 favicon_io/             # Ícones da aba do navegador
+ 
 ```
 
 ---
